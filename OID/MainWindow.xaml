@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="295*"/>
             <ColumnDefinition Width="142*"/>
         </Grid.ColumnDefinitions>
