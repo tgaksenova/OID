@@ -23,6 +23,38 @@ namespace OID
         public MainWindow()
         {
             InitializeComponent();
+            using (var db = new JIPEntities())
+            {
+                var users = db.User.AsNoTracking().ToList();
+            }
+            using (var db = new JIPEntities())
+            {
+                var users = db.User.AsNoTracking().Where(u => u.Login.StartsWith("max")).ToList();
+            }
+            using (var db = new JIPEntities())
+            {
+                var users = db.User.AsNoTracking().FirstOrDefault(u => u.Login == "max" && u.Password == "test");
+            }
+
+        }
+        private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)
+        {
+            if (!(e.Content is Page page)) return;
+            this.Title = $"Lesson - {page.Title}";
+
+            if (page is Pages.AuthPage)
+            {
+                ButtonBack.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                ButtonBack.Visibility = Visibility.Visible;
+            }
+
+        }
+        private void ButtonBack_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack) MainFrame.GoBack();
         }
     }
 }
