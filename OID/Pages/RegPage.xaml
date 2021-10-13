@@ -5,10 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OID.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="RegPage">
 
-    <Grid>
-        
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Введите логин" HorizontalAlignment="Left" Margin="87,20,0,0" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Введите пароль" HorizontalAlignment="Left" Margin="87,60,0,0" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Подтвердите пароль" HorizontalAlignment="Left" Margin="87,100,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Выберите роль" HorizontalAlignment="Left" Margin="87,140,0,0" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Введите ФИО" HorizontalAlignment="Left" Margin="87,180,0,0" VerticalAlignment="Top" Width="153"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="87,230,0,0" Width="153" Height="35" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <TextBox  x:Name="TextBoxLogin" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="93.8,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="TextBoxPassword" Grid.Column="1" HorizontalAlignment="Left" Height="41" Margin="93.8,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="TextBoxRPassword" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="93.8,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="TextBoxFIO" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="93.8,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Регистрация" Grid.Column="1" HorizontalAlignment="Left" Margin="77.8,230,0,0" Width="196" Click="Button_Click" Height="35" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboBoxRole" Grid.Column="1" HorizontalAlignment="Left" Margin="93.8,145,0,0" VerticalAlignment="Top" Width="180" Height="35" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock >Customer</TextBlock>
+            <TextBlock>Director</TextBlock>
+        </ComboBox>
+
     </Grid>
 </Page>

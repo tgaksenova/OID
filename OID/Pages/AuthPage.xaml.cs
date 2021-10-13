@@ -34,7 +34,7 @@ namespace OID.Pages
             }
             using (var db = new JIPEntities())
             {
-                var user = db.User.AsNoTracking().FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == PasswordBox.Password);
+                var user = db.User2.AsNoTracking().FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == PasswordBox.Password);
 
                 if (user == null)
                 {

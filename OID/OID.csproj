@@ -81,7 +81,7 @@
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="User2.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Page Include="Dictionary.xaml">

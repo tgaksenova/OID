@@ -7,13 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="581*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="75*"/>
             <RowDefinition Height="274*"/>
             <RowDefinition Height="75*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="#FFF4F4F5" Margin="0,0.2,-0.4,0" Stroke="Black" StrokeThickness="0" Grid.Row="2" HorizontalAlignment="Right" Width="794"/>
-        <Button Click="ButtonBack_OnClick" x:Name="ButtonBack"  Content="Назад" Margin="10,10,694.6,27.2" Height="Auto"/>
-        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" Margin="10,9.8,0,18.8" Grid.Row="1" Width="774" Source="Pages/AuthPage.xaml" Navigated="MainFrame_OnNavigated"/> 
+        <Rectangle Fill="#FFF4F4F5" Margin="0,0.2,-0.4,0" Stroke="Black" StrokeThickness="0" Grid.Row="2" HorizontalAlignment="Right" Width="794" Grid.ColumnSpan="2"/>
+        <Button Click="ButtonBack_OnClick" x:Name="ButtonBack"  Content="Назад" Margin="10,10,0,27.2" Height="Auto" HorizontalAlignment="Left" Width="111"/>
+        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" Margin="10,9.8,0,18.8" Grid.Row="1" Width="774" Source="Pages/AuthPage.xaml" Navigated="MainFrame_OnNavigated" Grid.ColumnSpan="2"/>
+        <Button Content="Экспорт" HorizontalAlignment="Left" Margin="287.2,10,0,0" VerticalAlignment="Top" Width="111" Height="38" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="Импорт" HorizontalAlignment="Left" Margin="437.2,10,0,0" VerticalAlignment="Top" Width="111" Grid.Column="1" Height="38" Click="Button_Click_1"/>
     </Grid>
 </Window>

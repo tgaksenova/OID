@@ -25,6 +25,6 @@ namespace OID
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<User2> User2 { get; set; }
     }
 }

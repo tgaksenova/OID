@@ -12,12 +12,12 @@ namespace OID
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class User2
     {
         public string Login { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
         public string FIO { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
     }
 }
